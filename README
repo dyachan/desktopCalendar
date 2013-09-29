@@ -1,0 +1,39 @@
+Agenda de google_calendat en el escritorio
+
+uso: ./doConky.sh
+
+archivos:
+  buildAgenda.py: extrae las tareas de GC y genera el flujo para conky
+  conky1: cabecera de .conkyrc
+  doConky.sh: descarga las tareas almacenandolas en un archivo temporal y genera el archivo .conkyrc
+  getAgenda.sh: descarga las tareas de GC
+  
+software:
+  conky 1.8.0
+  python 3.1.2
+  gcalcli 1.4
+
+Configuración:
+
+  Usuario y clave:
+    Cambiar en archivo getAgenda.sh 'usuario' por su usuario y 'clave' por su clave.
+  
+  Tipos de tareas:
+    Agregar/Eliminar en el archivo buildAgenda.py en la linea 12 el diccionario 'tipos' el/los tipos de tarea que desea tener.
+    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
+  
+  Cambiar color a tareas:
+    Agregar/Eliminar en el archivo conky1 a partir de la linea 32 los colores que guste tener. Los colores están definidos por el esquema X11 (http://www.graphviz.org/doc/info/colors.html).
+  
+  Cambiar color a hora de tarea:
+    Modificar en archivo buildAgenda.py en la linea 13 la constante 'COLOR_HORA' por el color deseado.
+    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
+
+  Cambiar color a fecha sin tarea:
+    Modificar en archivo buildAgenda.py en la linea 14 la constante 'COLOR_FECHA_VACIA' por el color deseado.
+    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
+    
+  Cambiar color a fecha con tarea:
+    Modificar en archivo buildAgenda.py en la linea 15 la constante 'COLOR_FECHA_TAREA' por el color deseado.
+    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
+
