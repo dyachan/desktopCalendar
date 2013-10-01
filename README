@@ -14,10 +14,16 @@ software:
   gcalcli 1.4
 
 Configuración:
-
-  Usuario y clave:
-    Cambiar en archivo getAgenda.sh 'usuario' por su usuario y 'clave' por su clave.
+  Agregar todos los archivos a una carpeta que se llame 'conky' en el home del usuario.
   
+  Usuario y clave:
+    Crear un archivo en el directorio llamado gcalcliConfig donde se agregue lo siguiente:
+    ""
+    [gcalcli]
+    user: usuario@gmail.com
+    pw: clave  
+    ""
+    
   Tipos de tareas:
     Agregar/Eliminar en el archivo buildAgenda.py en la linea 12 el diccionario 'tipos' el/los tipos de tarea que desea tener.
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
