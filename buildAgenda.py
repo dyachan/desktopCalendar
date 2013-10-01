@@ -128,7 +128,7 @@ def formatoConky(tareas):
         m = False
       
       t += 1
-      if t > len(tareas):
+      if t >= len(tareas):
         u = True
     
     if v:
