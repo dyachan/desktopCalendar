@@ -49,3 +49,5 @@ Configuración:
     Modificar en archivo buildAgenda.py en la linea 15 la constante 'COLOR_FECHA_TAREA' por el color deseado.
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
 
+  Cambiar cantidad de días de tareas a mostrar:
+    Modificar en archivo buildAgenda.py en la linea 8 la constante 'CANT_DIAS' por la cantidad de días deseado, y en el archivo getAgenda.sh la parte donde sale "21 days" cambiar por la cantidad de días que se quiere.
