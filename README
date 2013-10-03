@@ -23,7 +23,10 @@ Configuración:
     user: usuario@gmail.com
     pw: clave  
     ""
-    
+  
+  Agregar recordatorio:
+    Agregar el recordatorio deseado en el archivo recordatorios (si no está, crearlo).
+  
   Tipos de tareas:
     Agregar/Eliminar en el archivo buildAgenda.py en la linea 12 el diccionario 'tipos' el/los tipos de tarea que desea tener.
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
@@ -34,7 +37,10 @@ Configuración:
   Cambiar color a hora de tarea:
     Modificar en archivo buildAgenda.py en la linea 13 la constante 'COLOR_HORA' por el color deseado.
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
-
+  
+  Cambiar font a hora de tarea:
+    modificar en archivo buildAgenda.py en la linea 20 la constante 'FONT_HORA' por el font en formato conky deseado.
+  
   Cambiar color a fecha sin tarea:
     Modificar en archivo buildAgenda.py en la linea 14 la constante 'COLOR_FECHA_VACIA' por el color deseado.
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
