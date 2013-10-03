@@ -5,7 +5,7 @@
 import re, datetime, sys
 
 #ARCHIVO_ENTRADA = "~/conky/tareas"
-CANT_DIAS = 30
+CANT_DIAS = 21
 
 mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 mes_e = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
@@ -16,7 +16,9 @@ COLOR_HORA = "${color4}"
 COLOR_FECHA_VACIA = "${color5}"
 COLOR_FECHA_TAREA = "${color6}"
 SEP_FECHA = " "
-SEP_HORA = ""
+SEP_HORA = " "
+FONT_HORA = "${font DejaVu Sans Mono:italic:size=10}"
+FONT_DEFAULT = "${font}"
 
 ## del archivo obtiene la fecha, hora, contenido y tipo de tarea en una tupla en ese orden respectivo.
 def obtenerTareas(archivo):
@@ -98,7 +100,7 @@ def printTarea(fecha, hora, contenido, tipo, mes):
   
   # imprimir hora
   if hora:
-    print(SEP_HORA + COLOR_HORA + hora)
+    print(FONT_HORA + SEP_HORA + COLOR_HORA + hora + FONT_DEFAULT)
   else:
     print("")
 

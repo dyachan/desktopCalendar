@@ -10,7 +10,6 @@ draw_graph_borders yes
 draw_outline no
 draw_shades no
 use_xft yes
-xftfont DejaVu Sans Mono:size=12
 gap_x 5
 gap_y 5
 minimum_size 5 5
@@ -29,12 +28,16 @@ use_spacer none
 show_graph_scale no
 show_graph_range no
 
+xftfont DejaVu Sans Mono:size=12
+
 color1 royalblue
 color2 green
 color3 red
 color4 grey50
 color5 grey30
 color6 white
+
+color9 yellow
 
 double_buffer yes
 own_window_argb_visual true
@@ -45,3 +48,5 @@ own_window_transparent yes
 own_window_type normal
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 TEXT
+${color9}RECORDATORIOS:
+
