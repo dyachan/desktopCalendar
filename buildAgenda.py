@@ -112,6 +112,8 @@ def printFechaVacia(fecha, mes):
 def formatoConky(tareas):
   delta = datetime.timedelta(1) # delta de un dia
   actual = datetime.date.today() # fecha actual a escribir
+  for i in range(10):
+    actual += delta
   
   t = 0 # tarea actual
   u = False # indica si se ha escrito la ultima tarea
