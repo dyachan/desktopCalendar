@@ -5,7 +5,7 @@
 import re, datetime, sys
 
 #ARCHIVO_ENTRADA = "~/conky/tareas"
-CANT_DIAS = 21
+CANT_DIAS = 22
 
 mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 mes_e = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
@@ -114,6 +114,8 @@ def formatoConky(tareas):
   actual = datetime.date.today() # fecha actual a escribir
   
   t = 0 # tarea actual
+  while(actual > tareas[t][0]): # saltar tareas que ya han pasado
+    t += 1
   u = False # indica si se ha escrito la ultima tarea
   m = True # indica si se debe escribir el mes
   for d in range(CANT_DIAS):
