@@ -50,4 +50,4 @@ Configuración:
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
 
   Cambiar cantidad de días de tareas a mostrar:
-    Modificar en archivo buildAgenda.py en la linea 8 la constante 'CANT_DIAS' por la cantidad de días deseado, y en el archivo getAgenda.sh la parte donde sale "21 days" cambiar por la cantidad de días que se quiere.
+    Modificar en archivo buildAgenda.py en la linea 8 la constante 'CANT_DIAS' por la cantidad de días deseado, y en el archivo getAgenda.sh la parte donde sale "XX days" cambiar XX por la cantidad de días que se quiere. Se recomienda que la cantidad de días del archivo getAgenda.sh sea mayor en un dia del archivo buildAgenda.py para que se tengan todas las tareas del último día. La cantidad de días que se visualizarán en conky serán los indicados en el archivo buildAgenda.py.
