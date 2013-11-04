@@ -18,7 +18,6 @@ echo "" >> $HOME/$OUTPUT
 if [ $# -eq 0 ]
 then
   $HOME/$DIR/buildAgenda.py $HOME/$DIR/tareas > $HOME/$DIR/ultimoCal
-  echo "asd"
 fi
 cat $HOME/$DIR/ultimoCal >> $HOME/$OUTPUT
 echo "" >> $HOME/$OUTPUT

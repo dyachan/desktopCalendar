@@ -11,7 +11,7 @@ mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "
 mes_e = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 dia = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
 
-tipos = {"default": "${color1}", "entrega": "${color2}", "prueba": "${color3}"}
+tipos = {"default": "${color1}", "entrega": "${color2}", "prueba": "${color3}", "asistencia": "${color7}"}
 COLOR_HORA = "${color4}"
 COLOR_FECHA_VACIA = "${color5}"
 COLOR_FECHA_TAREA = "${color6}"
