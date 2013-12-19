@@ -11,7 +11,7 @@ mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "
 mes_e = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 dia = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
 
-tipos = {"default": "${color1}", "entrega": "${color2}", "prueba": "${color3}", "asistencia": "${color7}"}
+tipos = {"default": "${color1}", "entrega": "${color2}", "prueba": "${color3}", "otro": "${color7}"}
 COLOR_HORA = "${color4}"
 COLOR_FECHA_VACIA = "${color5}"
 COLOR_FECHA_TAREA = "${color6}"
@@ -44,8 +44,8 @@ def obtenerTareas(archivo):
   for d in lineas[:len(lineas)-1]:
     # obtener fecha
     gr = re.match("\w{3} (\w{3}) (\d{2}).*", d[0])
-#    if datetime.date.today().month > mes_i.index(gr.group(1)):
-#      buff = 1
+    if datetime.date.today().month > mes_i.index(gr.group(1))+1:
+      buff = 1
     fecha = datetime.date(datetime.date.today().year+buff, mes_i.index(gr.group(1))+1, int(gr.group(2)))
     
     # obtener hora, tarea y comentario
