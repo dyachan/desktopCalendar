@@ -2,6 +2,7 @@
 
 readonly DIR=conky
 readonly OUTPUT=.conkyrc
+readonly LASTAGENDA=ultimoCal
 
 ## conseguir agenda
 if [ $# -eq 0 ]
@@ -17,9 +18,9 @@ echo "" >> $HOME/$OUTPUT
 ## escribir agenda
 if [ $# -eq 0 ]
 then
-  $HOME/$DIR/buildAgenda.py $HOME/$DIR/tareas > $HOME/$DIR/ultimoCal
+  $HOME/$DIR/buildAgenda.py $HOME/$DIR/tareas > $HOME/$DIR/$LASTAGENDA
 fi
-cat $HOME/$DIR/ultimoCal >> $HOME/$OUTPUT
+cat $HOME/$DIR/$LASTAGENDA >> $HOME/$OUTPUT
 echo "" >> $HOME/$OUTPUT
 
 ## eliminar todo rastro de posible búsqueda infiltrada peligrosa y anónima
