@@ -9,7 +9,8 @@ CANT_DIAS = 22
 
 mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dec"]
 mes_e = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
-dia = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
+#dia = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
+dia = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"]
 
 tipos = {"default": "${color1}", "entrega": "${color2}", "prueba": "${color3}", "otro": "${color7}"}
 COLOR_HORA = "${color4}"
