@@ -30,15 +30,18 @@ show_graph_range no
 
 xftfont DejaVu Sans Mono:size=12
 
-color1 royalblue
-color2 green
-color3 red
-color4 grey50
-color5 grey30
-color6 white
-color7 darkorange
+color1 yellow # recordatorios
 
-color9 yellow
+color2 grey30 # fecha vacia
+color3 white # fecha ocupada
+
+color4 royalblue # defecto
+color5 green # entrega
+color6 red # importante
+color7 darkorange # otro
+color8 darkviolet # fraternal
+
+color9 grey50 # hora
 
 double_buffer yes
 own_window_argb_visual true
@@ -49,5 +52,5 @@ own_window_transparent yes
 own_window_type normal
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 TEXT
-${color9}RECORDATORIOS:
+${color1}RECORDATORIOS:
 

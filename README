@@ -3,10 +3,15 @@ Agenda de google calendar en el escritorio
 uso: ./doConky.sh
 
 archivos:
-  buildAgenda.py: extrae las tareas de GC y genera el flujo para conky
+  buildAgenda.py: organiza las tareas y las deja e formato conky
   conky1: cabecera de .conkyrc
   doConky.sh: descarga las tareas almacenandolas en un archivo temporal y genera el archivo .conkyrc
   getAgenda.sh: descarga las tareas de GC
+  python:
+    Agenda.py: clase Agenda, funciones relacionadas con la creación de la agenda
+    CONST.py: constantes varias
+    Tarea.py: clase Tarea, funciones relacionadas con una tarea en particular
+    utils.py: funciones varias
   
 software:
   conky 1.8.0
@@ -28,26 +33,12 @@ Configuración:
     Agregar el recordatorio deseado en el archivo recordatorios (si no está, crearlo).
   
   Tipos de tareas:
-    Agregar/Eliminar en el archivo buildAgenda.py en la linea 12 el diccionario 'tipos' el/los tipos de tarea que desea tener.
+    Agregar/Eliminar en el archivo CONST.py en la clase Tipo de la clase TITULO
     NOTA: el color que se le asigne debe estar definido en el archivo conky1.
   
-  Cambiar color a tareas:
-    Agregar/Eliminar en el archivo conky1 a partir de la linea 32 los colores que guste tener. Los colores están definidos por el esquema X11 (http://www.graphviz.org/doc/info/colors.html).
-  
-  Cambiar color a hora de tarea:
-    Modificar en archivo buildAgenda.py en la linea 13 la constante 'COLOR_HORA' por el color deseado.
-    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
-  
-  Cambiar font a hora de tarea:
-    modificar en archivo buildAgenda.py en la linea 20 la constante 'FONT_HORA' por el font en formato conky deseado.
-  
-  Cambiar color a fecha sin tarea:
-    Modificar en archivo buildAgenda.py en la linea 14 la constante 'COLOR_FECHA_VACIA' por el color deseado.
-    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
-    
-  Cambiar color a fecha con tarea:
-    Modificar en archivo buildAgenda.py en la linea 15 la constante 'COLOR_FECHA_TAREA' por el color deseado.
-    NOTA: el color que se le asigne debe estar definido en el archivo conky1.
+  Cambiar color a textos en conky:
+    Agregar/Eliminar en el archivo conky1 a partir de la linea 33 los colores que guste tener. Los colores están definidos por el esquema X11 (http://www.graphviz.org/doc/info/colors.html).
 
-  Cambiar cantidad de días de tareas a mostrar:
-    Modificar en archivo buildAgenda.py en la linea 8 la constante 'CANT_DIAS' por la cantidad de días deseado, y en el archivo getAgenda.sh la parte donde sale "XX days" cambiar XX por la cantidad de días que se quiere. Se recomienda que la cantidad de días del archivo getAgenda.sh sea mayor en un dia del archivo buildAgenda.py para que se tengan todas las tareas del último día. La cantidad de días que se visualizarán en conky serán los indicados en el archivo buildAgenda.py.
+  Cambiar font a hora de tarea:
+    modificar en archivo CONST.py en la linea 41 el atributo fuente de la clase HORA por el font en formato conky deseado.
+  
