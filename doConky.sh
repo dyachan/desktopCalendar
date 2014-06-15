@@ -20,6 +20,7 @@ echo "" >> $HOME/$OUTPUT
 if [ $# -eq 0 ]
 then
   $HOME/$DIR/buildAgenda.py $HOME/$DIR/agenda_default $HOME/$DIR/agenda_fraternal > $HOME/$DIR/$LAST_AGENDA
+#  $HOME/$DIR/buildAgenda.py $HOME/$DIR/agenda_default > $HOME/$DIR/$LAST_AGENDA
 fi
 cat $HOME/$DIR/$LAST_AGENDA >> $HOME/$OUTPUT
 echo "" >> $HOME/$OUTPUT

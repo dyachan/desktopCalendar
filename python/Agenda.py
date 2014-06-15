@@ -30,24 +30,26 @@ class Agenda:
       print("ERROR: Fecha mayor al rango ("+str(n)+")")
   
   def toConky(self):
-    for dia in self.dias:
-      # agregar fecha
+    for dia in self.dias: # para cada día
+      # iniciar agregar fecha
       print(CONST.FECHA.fuente, end="")
-      if len(dia) == 1:
+      if len(dia) == 1: # ver si hay tareas ese día
         print(CONST.FECHA.vacia, end="")
       else:
         print(CONST.FECHA.ocupado, end="")
+      # se agrega la fecha
       print(CONST.FECHA.separador+dia[0], end="")
       
-      # agregar tareas
-      if len(dia[1:]) == 0:
+      # iniciar agregar tareas
+      if len(dia[1:]) == 0: # si no hay tareas ...
         print("")
       else:
         dia[1].toConky()
         for tarea in dia[2:]:
-          print("         ", end="")
+          print(CONST.FECHA.fuente+CONST.FECHA.separador+" "*9, end="")
           tarea.toConky()
       
+      # si es domingo
       if re.match(".*"+CONST.dia[6], dia[0]):
         print("")
   
