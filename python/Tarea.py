@@ -21,3 +21,7 @@ class Tarea:
       print(CONST.HORA.fuente+CONST.HORA.color+CONST.HORA.separador+self.hora)
     else:
       print("")
+  
+  def showMe(self):
+    print(str(self.fecha)+","+self.hora+","+self.titulo+","+self.tipo)
+  

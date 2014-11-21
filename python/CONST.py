@@ -2,9 +2,9 @@
 #!/usr/bin/env python3
 
 
-CANT_DIAS = 22
+CANT_DIAS = 23
 
-mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dec"]
+mes_i = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 mes_e = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
 #dia = ["Lun", "Mar", "Mie", "Jue", "Vie", "Sab", "Dom"]
 dia = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"]
@@ -20,17 +20,19 @@ class TITULO:
   fuente = "${font}"
 
   class TIPO:
+    defecto = "${color4}"
     entrega = "${color5}"
     importante = "${color6}"
-    defecto = "${color4}"
     otro = "${color7}"
     fraternal = "${color8}"
+    sin_tipo = "${color2}"
 
     TIPOS = [
+      (defecto, "diego.yachan@gmail.com"),
       (entrega, "entrega"),
       (importante, "importante"),
       (otro, "otro"),
-      (defecto, "")
+      (fraternal, "elefantes")
     ]
 
 class HORA:

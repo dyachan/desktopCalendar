@@ -54,8 +54,6 @@ class Agenda:
         print("")
   
   # TODO: revisar eficiencia
-  def agregarTareas(self, tareas, tipo=None):
+  def agregarTareas(self, tareas):
     for tarea in tareas:
-      if tipo != None:
-        tarea.tipo = tipo
       self.agregarTarea(tarea)

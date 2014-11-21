@@ -3,7 +3,7 @@ Agenda de google calendar en el escritorio
 uso: ./doConky.sh
 
 archivos:
-  buildAgenda.py: organiza las tareas y las deja e formato conky
+  buildAgenda.py: organiza las tareas y las deja en formato conky
   conky1: cabecera de .conkyrc
   doConky.sh: descarga las tareas almacenandolas en un archivo temporal y genera el archivo .conkyrc
   getAgenda.sh: descarga las tareas de GC
@@ -16,18 +16,12 @@ archivos:
 software:
   conky 1.8.0
   python 3.1.2
-  gcalcli 1.4
+  gcalcli 3.1
 
 Configuración:
-  Agregar todos los archivos a una carpeta que se llame 'conky' en el home del usuario.
+  El siguiente comando hará que gcalcli se configure con su cuenta de gmail
+  $ gcalcli --config config_gcalcli agenda
   
-  Usuario y clave:
-    Crear un archivo en el directorio llamado gcalcliConfig donde se agregue lo siguiente:
-    ""
-    [gcalcli]
-    user: usuario@gmail.com
-    pw: clave  
-    ""
   
   Agregar recordatorio:
     Agregar el recordatorio deseado en el archivo recordatorios (si no está, crearlo).
